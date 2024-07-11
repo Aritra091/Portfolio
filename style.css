@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #34353b;
+}
+
+header {
+  height: 100vh;
+  padding: 36px 100px;
+  
+  background-image: url(/assets/grey2.jpg);
+  background-position: top right;
+  background-size: contain;
+  background-size: 20vw 50vw;
+  background-repeat: no-repeat;
+  
+  width: 100vw;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 90%;
+  z-index: 99;
+}
+
+header nav img {
+  height: 9vw;
+  width: 9vw;
+  object-fit:cover;
+  filter: invert(70%) sepia(96%) () hue-rotate(359deg)
+    brightness(103%) contrast(106%);
+  border-radius: 50%;
+  border-style:solid;
+  border-color:#fec86a;
+}
+
+header nav img:hover{
+  transform: scale(1.2);
+  transition: all .2s ease-in;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 0px 1.7vw;
+  font-size: 1.5vw;
+}
+
+header nav ul li a {
+  color: #98999a;
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+header nav ul li a:hover {
+  color: #fbfbfb;
+}
+
+header nav ul li .active {
+  color: #fbfbfb;
+}
+
+header nav .search {
+  height: 4.05vw;
+  width: 16vw;
+  background-color: #3d3e42;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+header nav .search input {
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  color: #fbfbfb;
+  outline: none;
+}
+
+header nav .search input:focus {
+  border: none;
+  outline: none;
+}
+
+header nav .search input::placeholder {
+  color: #98999a;
+  font-size: 1.4vw;
+}
+
+header nav .search i {
+  color: #98999a;
+}
+
+.landing {
+  display: flex;
+  height: 90vh;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing .intro h3 {
+  color: #fbfbfb;
+  font-weight: 400;
+  font-size: 2.7vw;
+  margin-left: 10vw;
+}
+
+.landing .intro h3 span {
+  color: #fec86a;
+  font-weight: 600;
+  font-size: 4.7vw;
+}
+
+.intro button {
+  height: 4.1vw;
+  width: 12.2vw;
+  margin-top: 2.5vh;
+  margin-left: 10vw;
+  background-color: transparent;
+  border: 2px solid #fec86a;
+  border-radius: 8px;
+  color: #fec86a;
+  font-size: 1.4vw;
+  transition: all ease 0.5s;
+}
+
+.intro button:hover {
+  background-color: #fec86a;
+  color: #34353b;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85vw;
+  align-items: center;
+  margin-top: 18vw;
+}
+
+.socials .line {
+  background-color: #fec86a;
+  height: 6.1vw;
+  width: 0.21vw;
+}
+
+.socials i {
+  color: #fbfbfb;
+  font-size: 3.03vw;
+  
+}
+
+.about {
+  width: 100vw;
+  padding: 100px 100px;
+}
+
+.about h1 {
+  font-size: 4.78vw;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+}
+
+.about .description {
+  display: flex;
+  align-items: start;
+}
+
+.about .description .line {
+  height: 1px;
+  width: 400px;
+  background-color: #fec86a;
+  margin-right: 32px;
+}
+
+.about .description p {
+  color: #fbfbfb;
+  font-size: 1.68vw;
+  margin: 10px;
+}
+
+.about .description p span {
+  color: #fec86a;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+  margin-top: 50px;
+}
+
+.skills h1 {
+  font-size: 4.78vw;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.skill-card {
+  height: 20vw;
+  width: 20vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+
+.skill-card:hover {
+  background-color: #fec86a;
+}
+
+.skill-card img {
+  height: 7.5vw;
+  width: 7.5vw;
+  object-fit: contain;
+}
+
+.skill-card h2 {
+  font-size: 2.1vw;
+  font-weight: 400;
+  color: #fbfbfb;
+}
+
+/* General Styling */
+body {
+  font-family: "Libre Baskerville", serif;
+  color: #fbfbfb;
+}
+
+/* Education Section */
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px; /* Adjusted padding for responsiveness */
+}
+
+.education h1 {
+  font-size: 4vw; /* Relative unit for font size */
+  font-weight: 700;
+  color: #fbfbfb;
+}
+
+/* Content Table */
+.content-table {
+  border: 1px solid #fec86a; /* Simplified border properties */
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.5vw; /* Relative unit for font size */
+  min-width: 100%; /* Ensure table takes full width on smaller screens */
+  max-width: 800px; /* Set a maximum width */
+  color: #fbfbfb;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+tr {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #fec86a; /* Ensure border color matches */
+}
+
+#table-head {
+  background-color: #fec86a;
+  color: #fbfbfb;
+}
+
+tr:hover {
+  background-color: #3d3e42;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.exp-pro {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.darker-div {
+  background-color: #34353a;
+  width: 100vw;
+  height: 10vh;
+}
+
+.exp-pro h1 {
+  position: absolute;
+  color: #fbfbfb;
+  font-size: 5vw;
+  font-family: "Libre Baskerville", serif;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 15%;
+}
+
+.lighter-div {
+  background-color: #3d3e42;
+  width: 100vw;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lighter-div .exp {
+  width: 50vw;
+  position: relative;
+  margin-left: 20vh;
+}
+
+.exp h2 {
+  color: #fbfbfb;
+  font-size: 2.7vw;
+  font-weight: 400;
+}
+
+.exp h2::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  color: #fec86a;
+  background-color: #fec86a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7.5%;
+  left: -5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #fec86a;
+}
+
+.exp-desc::before {
+  content: "";
+  height: 190px;
+  width: 2.5px;
+  background-color: #fbfbfb;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: -5%;
+}
+.exp-desc h3 {
+  color: #fbfbfb;
+  font-size: 1.68vw;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.exp-desc p {
+  color: #fbfbfb;
+  font-size: 1.35vw;
+  font-weight: 400;
+}
+
+#weather {
+  color: lightblue;
+  font-size: 1.4vw;
+  text-decoration: none;
+}
+
+.connect {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.connect {
+  width: 100vw;
+  padding: 8.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect h1 {
+  font-size: 4.78vw;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.con {
+  display: flex;
+  gap: 2.1vw;
+}
+
+.con-card {
+  background-color: #fec86a;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  margin-top: 7.5vh;
+  cursor:pointer;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 400;
+  box-shadow: 0 0 10px #fec86a;
+}
+
+.con-card a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.con-card:hover{
+  transition: all .2s ease-in;
+  transition: all .2s ease-out;
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
